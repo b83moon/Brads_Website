@@ -11,8 +11,12 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/custom.css" />
+
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 	</head>
+
+	<!-- this shows up -->
 	<body class="landing">
 		<div id="page-wrapper">
 
@@ -33,11 +37,13 @@
 
 			<!-- Banner -->
 				<section id="banner">
-					<h2>Brad Moon</h2>
-					<p>Electrical Engineer</p>
-					<ul class="actions">
-					<!-- 	<li><a href="#" class="button special">Sign Up</a></li>
-						<li><a href="#" class="button">Learn More</a></li> -->
+					<h2 style="font-size:60px">Brad Moon</h2>
+					<p style="font-size:20px">Electrical Engineer</p>
+					<ul class="icons">
+						<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+						<li><a href="#" class="icon fa-github"><span class="label">Github</span></a></li>
+						<li><a href="#" class="icon fa-envelope"><span class="label">Mail</span></a></li>
+						<li><a href="#" class="icon fa-linkedin"><span class="label">Linkedin</span></a></li>
 					</ul>
 				</section>
 
@@ -47,23 +53,43 @@
 					<section class="box special">
 						<header class="major">
 							<h2>About Me</h2>
-							<p>I spend my time understanding concepts to the point that they are elementary lego blocks. I discover new lego blocks with scientific method. Then I use these lego blocks to build something incredible that solves real problems. 
+							<p class="intro-paragraph">I spend my time understanding concepts to the point that they are elementary lego blocks. I discover new lego blocks with scientific method. Then I use these lego blocks to build something incredible that solves real problems. 
 							</p>
 						</header>
-						<span class="image featured"><img src="images/pic01.jpg" alt="" /></span>
+						<div class="row">
+						<div class="6u 12u(mobilep)">
+							<ul class="alt">
+								<li>Startups</li>
+								<li>Microcontrollers</li>
+								<li>Electromagnetics</li>
+								<li>KW Region</li>
+								
+							</ul>
+						</div>
+
+						<div class="6u 12u(mobilep)">
+							<ul class="alt">
+								<li>Electrical Engineering</li>
+								<li>PCB Design</li>
+								<li>Analog Circuits</li>
+								<li>University of Alberta</li>
+							</ul>
+						<!--span class="image featured"><img src="images/pic01.jpg" alt="" /></span-->
 					</section>
 
 					
 				<!-- Projects -->
 					<section id="projects">
-					<h2>Projects</h2>
+					<section class="box">
+						<h2>Projects</h2>
+					</section>
 					<div class="row">
 						<div class="6u 12u(narrower)">
 
 							<section class="box special">
 								<span class="image featured"><img src="images/BMSpic.jpg" alt="" /></span>
 								<h3>Battery Management System</h3>
-								<p>Integer volutpat ante et accumsan commophasellus sed aliquam feugiat lorem aliquet ut enim rutrum phasellus iaculis accumsan dolore magna aliquam veroeros.</p>
+								<p>A system the redistributes energy from the stronger cells to the weaker cells in a battery pack in order to maximize the capacity avaiable to the load at its operating voltage.</p>
 								<ul class="actions">
 									<li><a href="#" class="button alt">Learn More</a></li>
 								</ul>
@@ -75,7 +101,7 @@
 							<section class="box special">
 								<span class="image featured"><img src="images/Plasmapic.jpg" alt="" /></span>
 								<h3>Plasma Speaker</h3>
-								<p>Integer volutpat ante et accumsan commophasellus sed aliquam feugiat lorem aliquet ut enim rutrum phasellus iaculis accumsan dolore magna aliquam veroeros.</p>
+								<p>A loudspeaker which varies air pressure via a high-energy electrical plasma. Just plug in your phone, turn on some good tunes and voila! Music! </p>
 								<ul class="actions">
 									<li><a href="#" class="button alt">Learn More</a></li>
 								</ul>
@@ -86,7 +112,7 @@
 							<section class="box special">
 								<span class="image featured"><img src="images/HH.jpg" alt="" /></span>
 								<h3>Hamster Home</h3>
-								<p>Integer volutpat ante et accumsan commophasellus sed aliquam feugiat lorem aliquet ut enim rutrum phasellus iaculis accumsan dolore magna aliquam veroeros.</p>
+								<p>Hamster Home tracks the wellbeing of your hamster. It monitors water levels, tracks the distance the hamster has ran and allow you to feed the hamster from the website. This project was a 2016 Hack the North winner!</p>
 								<ul class="actions">
 									<li><a href="#" class="button alt">Learn More</a></li>
 								</ul>
@@ -97,7 +123,18 @@
 							<section class="box special">
 								<span class="image featured"><img src="images/Weasleypic.jpg" alt="" /></span>
 								<h3>Modern Weasley Clock</h3>
-								<p>Integer volutpat ante et accumsan commophasellus sed aliquam feugiat lorem aliquet ut enim rutrum phasellus iaculis accumsan dolore magna aliquam veroeros.</p>
+								<p>Based on the Harry Potter Weasley Clock, the hardware and iOS app that lets you know where your family or roommates are in the locations that matter. This project was a 2017 Hack the North winner!</p>
+								<ul class="actions">
+									<li><a href="#" class="button alt">Learn More</a></li>
+								</ul>
+							</section>
+						</div>	
+						<div class="6u 12u(narrower)">
+
+							<section class="box special">
+								<span class="image featured"><img src="images/WCV2.jpg" alt="" /></span>
+								<h3>Modern Weasley Clock V 2.0</h3>
+								<p>Since we received $1000 from 1517 at Hack the North for the Modern Weasley Clock, we decided to continue working on the project and start version 2.0.</p>
 								<ul class="actions">
 									<li><a href="#" class="button alt">Learn More</a></li>
 								</ul>
@@ -108,7 +145,7 @@
 							<section class="box special">
 								<span class="image featured"><img src="images/Laserharppic.jpg" alt="" /></span>
 								<h3>Laser Harp</h3>
-								<p>Integer volutpat ante et accumsan commophasellus sed aliquam feugiat lorem aliquet ut enim rutrum phasellus iaculis accumsan dolore magna aliquam veroeros.</p>
+								<p>A musical instrument thats puts a spin on a harp by replacing its strings with lasers. It plays a corresponding note when the user touches one of the laser beams. </p>
 								<ul class="actions">
 									<li><a href="#" class="button alt">Learn More</a></li>
 								</ul>
@@ -120,7 +157,7 @@
 							<section class="box special">
 								<span class="image featured"><img src="images/Heartpic.jpg" alt="" /></span>
 								<h3>PCB Heart</h3>
-								<p>Integer volutpat ante et accumsan commophasellus sed aliquam feugiat lorem aliquet ut enim rutrum phasellus iaculis accumsan dolore magna aliquam veroeros.</p>
+								<p>A simple heart PCB that slowly blinks LEDs when turned on. It was a fun project that I made for Michelle :) </p>
 								<ul class="actions">
 									<li><a href="#" class="button alt">Learn More</a></li>
 								</ul>
@@ -131,11 +168,54 @@
 				</section>
 
 				<section id="Work Experience">
-					<h2>Work Experience</h2>
-				</section>
+					<section class="box">
+						<h2>Work Experience</h2>
+								<div class="box alt">
+									<h3>Famlink    CEO</h3>
+									<h4>20XX-20XX
+									<p><span class="image left"><img src="images/pic05.jpg" alt="" /></span>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent.</p>
+									<h3>Teledyne Dalsa     Image Sensor Designer</h3>
+									<h4>20XX-20XX
+									<p><span class="image left"><img src="images/pic05.jpg" alt="" /></span>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. </p>
+									<h3>TR Tech    Technology Developer</h3>
+									<h4>20XX-20XX
+									<p><span class="image left"><img src="images/pic05.jpg" alt="" /></span>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. </p>
+								</section>
 
 				</section>
 
+
+				<section id="Involvement">
+					<section class="box">
+						<h2>Involvement</h2>
+								<div class="box alt">
+									<h3>University of Alberta SPIE Club President</h3>
+									<p><span class="image left"><img src="images/pic05.jpg" alt="" /></span>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent.</p>
+									<h3>Hack the North Mentor 2017</h3>
+									<p><span class="image left"><img src="images/pic05.jpg" alt="" /></span>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. dsjafdlsahfkjdhsakhfkdshakjfhdsdfsaf</p>
+									<h3>HackEd Mentor 2017</h3>
+									<p><span class="image left"><img src="images/pic05.jpg" alt="" /></span>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. </p>
+								</section>
+				</section>
+
+
+
+				<section id="Education">
+					<section class="box">
+						<h2>Education</h2>
+								<div class="box alt">
+									<h3>University of Alberta SPIE</h3>
+									<p><span class="image left"><img src="images/pic05.jpg" alt="" /></span>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent.</p>
+									<h3>Velocity Garage</h3>
+									<p><span class="image left"><img src="images/pic05.jpg" alt="" /></span>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. dsjafdlsahfkjdhsakhfkdshakjfhdsdfsaf</p>
+									<h3>Communitech Market Validation Lab</h3>
+									<p><span class="image left"><img src="images/pic05.jpg" alt="" /></span>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. </p>
+								</section>
+				</section>
+
+
+
+				</section>
 					<!-- Form -->
 				<section class="container">
 					<h3>Contact</h3>
@@ -169,14 +249,12 @@
 				<footer id="footer">
 					<ul class="icons">
 						<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-						<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-						<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
 						<li><a href="#" class="icon fa-github"><span class="label">Github</span></a></li>
-						<li><a href="#" class="icon fa-dribbble"><span class="label">Dribbble</span></a></li>
-						<li><a href="#" class="icon fa-google-plus"><span class="label">Google+</span></a></li>
+						<li><a href="#" class="icon fa-envelope"><span class="label">Mail</span></a></li>
+						<li><a href="#" class="icon fa-linkedin"><span class="label">Linkedin</span></a></li>
 					</ul>
 					<ul class="copyright">
-						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+						</a></li>
 					</ul>
 				</footer>
 
