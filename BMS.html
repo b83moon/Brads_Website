@@ -39,35 +39,90 @@
 					</header>
 					<div class="box">
 						<span class="image featured"><img src="images/bmspic.jpg" alt="" /></span>
-						<h3>This is a subheading</h3>
-						<p>Cep risus aliquam gravida cep ut lacus amet. Adipiscing faucibus nunc placerat. Tempus adipiscing turpis non blandit accumsan eget lacinia nunc integer interdum amet aliquam ut orci non col ut ut praesent. Semper amet interdum mi. Phasellus enim laoreet ac ac commodo faucibus faucibus. Curae ante vestibulum ante. Blandit. Ante accumsan nisi eu placerat gravida placerat adipiscing in risus fusce vitae ac mi accumsan nunc in accumsan tempor blandit aliquet aliquet lobortis. Ultricies blandit lobortis praesent turpis. Adipiscing accumsan adipiscing adipiscing ac lacinia cep. Orci blandit a iaculis adipiscing ac. Vivamus ornare laoreet odio vis praesent nunc lorem mi. Erat. Tempus sem faucibus ac id. Vis in blandit. Nascetur ultricies blandit ac. Arcu aliquam. Accumsan mi eget adipiscing nulla. Non vestibulum ac interdum condimentum semper commodo massa arcu.</p>
-						<div class="row">
+						<h3>Description</h3>
+						<p><span class="image left"><img src="images/cells.jpg" alt="" width=220 height=150/></span>The goal of this system is to prolong the life time of battery packs. Over time battery packs need to be replaced as individual cells begin to degrade. Our system is designed to transfer energy from the battery pack to any weak cell. The picture to the left shows the dissipation of 4 cells. Over time in a typical battery pack, cells will significantly degrade and its voltage will drop off sooner than expected. These weak cell(s) act as a “weak point” and reduces the ability of the pack to hold a charge. Once the voltage of weak cell drop, the entire pack voltage will no longer be sufficiently high enough to power the load even if the rest of the cells still output the correct voltage. The purpose of our BMS is to transfer charge from the entire pack to the “weak” cell before the voltage drops below the minimum operating point.</p>
+						<h3>How it works</h3>
+						<p>The goal of this system is to prolong the life time of battery packs. Over time battery packs need to be replaced as individual cells begin to degrade. Our system is designed to transfer energy from the battery pack to any weak cell. The picture to the left shows the dissipation of 4 cells. Over time in a typical battery pack, cells will significantly degrade and its voltage will drop off sooner than expected. These weak cell act as a “weak point” and reduces the ability of the pack to hold a charge. Once the voltage of weak cell drop, the entire pack voltage will no longer be sufficiently high enough to power the load even if the rest of the cells still output the correct voltage. The purpose of our BMS is to transfer charge from the entire pack to the “weak” cell before the voltage drops below the minimum operating point.</p>
+
+
+						<p><span class="image left"><img src="images/pack-to-cell.jpg" alt="" width=220 height=110/></span>The overall hardware design consists of a step-down DC/DC converter that outputs 5V. The 5V supplies power to the entire board and also charges the weak cell. A Hall effect current sensor, along with an analog to digital converter sends data to the microcontroller which is fed into the charge estimation algorithm. The function of the microcontroller is to determine which of the cells are degraded and then charges using a state of charge estimation algorithm. Once the weak cell is detected, the switching circuitry will charge this cell.</p>
+						
+						<p>The three primary functions of the terminal pins are shown in the three figures below.  Figure 4 shows the system measuring the voltage of the desired cell. Figure 5 shows the system supplying energy to determined weak cell. Each output pin, shown on the left has three capabilities, connect to ground, connect to power, or measure voltage. By closing the two relays, as shown as white switches, we can connect the output pin to power. By Connecting the one relay we can connect the output pin to ground. And finally by connecting the relays as shown we can connect the output to the ADC to measure voltage. </p>
+
+						<div class="row no-collapse 50% uniform">
+								<div class="4u"><span class="image fit"><img src="images/power.jpg" alt="" /></span></div>
+								<div class="4u"><span class="image fit"><img src="images/ground.jpg" alt="" /></span></div>
+								<div class="4u"><span class="image fit"><img src="images/read.jpg" alt="" /></span></div>
+							</div>
+							<div class="row">
+							<div class="4u">
+								<p>Terminal to 5V</p>
+							</div>
+							<div class="4u">
+								<p>Terminal to Ground</p>
+							</div>
+							<div class="4u">
+								<p>Terminal to ADC</p>
+							</div>
+						</div>
+
+						<p>The three primary functions of the terminal pins are shown in the three figures below.  Figure 4 shows the system measuring the voltage of the desired cell. Figure 5 shows the system supplying energy to determined weak cell. Each output pin, shown on the left has three capabilities, connect to ground, connect to power, or measure voltage. By closing the two relays, as shown as white switches, we can connect the output pin to power. By Connecting the one relay we can connect the output pin to ground. And finally by connecting the relays as shown we can connect the output to the ADC to measure voltage. </p>
+
+						<div class="row no-collapse 50% uniform">
+								<div class="4u"><span class="image fit"><img src="images/current.jpg" alt="" /></span></div>
+								<div class="4u"><span class="image fit"><img src="images/voltage.jpg" alt="" /></span></div>
+								<div class="4u"><span class="image fit"><img src="images/charge.jpg" alt="" /></span></div>
+							</div>
+							<div class="row">
+							<div class="4u">
+								<p>Measure Current</p>
+							</div>
+							<div class="4u">
+								<p>Read Cell Voltage</p>
+							</div>
+							<div class="4u">
+								<p>Charge Weak Cell</p>
+							</div>
+						</div>
+
+
+
+
+
+							<div class="row">
 							<div class="6u 12u(mobilep)">
-								<h3>And now a subheading</h3>
+								<h3>What I Learned</h3>
 								<p>Adipiscing faucibus nunc placerat. Tempus adipiscing turpis non blandit accumsan eget lacinia nunc integer interdum amet aliquam ut orci non col ut ut praesent. Semper amet interdum mi. Phasellus enim laoreet ac ac commodo faucibus faucibus. Curae lorem ipsum adipiscing ac. Vivamus ornare laoreet odio vis praesent.</p>
 							</div>
+
 							<div class="6u 12u(mobilep)">
-								<h3>And another subheading</h3>
+								<h3>Resources</h3>
 								<p>Adipiscing faucibus nunc placerat. Tempus adipiscing turpis non blandit accumsan eget lacinia nunc integer interdum amet aliquam ut orci non col ut ut praesent. Semper amet interdum mi. Phasellus enim laoreet ac ac commodo faucibus faucibus. Curae lorem ipsum adipiscing ac. Vivamus ornare laoreet odio vis praesent.</p>
 							</div>
 						</div>
-					</div>
-				</section>
 
-			<!-- Footer -->
-				<footer id="footer">
-					<ul class="icons">
-						<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-						<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-						<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
-						<li><a href="#" class="icon fa-github"><span class="label">Github</span></a></li>
-						<li><a href="#" class="icon fa-dribbble"><span class="label">Dribbble</span></a></li>
-						<li><a href="#" class="icon fa-google-plus"><span class="label">Google+</span></a></li>
-					</ul>
-					<ul class="copyright">
-						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-					</ul>
+					</div>
+
+				</section>
+				
+			<!-- ****************************  Contant  ****************************-->
+
+				<section id="contact">
+					<footer id="footer">
+					<section class="container">
+						<h2>Contact</h2>
+						<p>Feel free to contact me through any of the following links.</p>
+						<ul class="icons">
+						<li><a href="https://twitter.com/Brad_83Moon" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+						<li><a href="mailto:bmoon@ualberta.ca" class="icon fa-envelope"><span class="label">Mail</span></a></li>
+						<li><a href="https://www.linkedin.com/in/bradmoon1/" class="icon fa-linkedin"><span class="label">Linkedin</span></a></li>
+						<li><a href="https://github.com/b83moon" class="icon fa-github"><span class="label">Github</span></a></li>
+
+					</ul>			
+					</section>
 				</footer>
+				</section>
+		</div>
 
 		</div>
 
