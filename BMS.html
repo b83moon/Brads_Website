@@ -16,21 +16,28 @@
 	<body>
 		<div id="page-wrapper">
 
-			<!-- Header -->
+			<!-- ****************************  Header  ****************************-->
 				<header id="header">
 					<nav id="nav">
 						<ul>
 							<li><a href="index.html">Home</a></li>
-							<li><a href="index.html#projects">Projects</a></li>
-							<li><a href="index.html#work-experience">Work Experience</a></li>
-							<li><a href="index.html#involvement">Involvement</a></li>
-							<li><a href="index.html#education">Education</a></li>
-							<li><a href="index.html#contact" class="button">Contact</a></li>
+							<li>
+								<a href="#projects" class="icon fa-angle-down">Projects</a>
+								<ul>
+									<li><a href="BMS.html">Battery Management </a></li>
+									<li><a href="plasma_speaker.html">Plasma Speaker</a></li>
+									<li><a href="modern_weasley_clock.html">Modern Weasley Clock</a></li>
+									<li><a href="modern_weasley_clock_v2.html">Weasley Clock V2.0</a></li>
+									<li><a href="laser_harp.html">Laser Harp</a></li>
+									<li><a href="pcb_heart.html">PCB Heart</a></li>
+								</ul>
+							<li><a href="#work-experience">Work Experience</a></li>
+							<li><a href="#involvement">Involvement</a></li>
+							<li><a href="#contact" class="button">Contact</a></li>
 
 						</ul>
 					</nav>
 				</header>
-
 			<!-- Main -->
 				<section id="main" class="container">
 					<header>
@@ -38,21 +45,21 @@
 						<p>A system the redistributes energy from the stronger cells to the weaker cells in a battery pack in order to maximize the capacity avaiable to the load at its operating voltage.</p>
 					</header>
 					<div class="box">
-						<span class="image featured"><img src="images/bmspic.jpg" alt="" /></span>
-						<h3>Description</h3>
-						<p><span class="image left"><img src="images/cells.jpg" alt="" width=220 height=150/></span>The goal of this system is to prolong the life time of battery packs. Over time battery packs need to be replaced as individual cells begin to degrade. Our system is designed to transfer energy from the battery pack to any weak cell. The picture to the left shows the dissipation of 4 cells. Over time in a typical battery pack, cells will significantly degrade and its voltage will drop off sooner than expected. These weak cell(s) act as a “weak point” and reduces the ability of the pack to hold a charge. Once the voltage of weak cell drop, the entire pack voltage will no longer be sufficiently high enough to power the load even if the rest of the cells still output the correct voltage. The purpose of our BMS is to transfer charge from the entire pack to the “weak” cell before the voltage drops below the minimum operating point.</p>
+						<span class="image featured"><img src="images/BMS/bmspic.jpg" alt="" /></span>
+						<h3>Problem</h3>
+						<p><span class="image left"><img src="images/BMS/cells.jpg" alt="" width=220 height=150/></span>Over time, in a battery pack, individual cells begin to degrade, this leads to the battery pack voltage decreasing prematurely. Even though there is still energy stored in the other "stonger" battery cells, the weak one acts as a bottle neck. The picture to the left shows the dissipation curves of 4 different lithium iron phosphate battery cells. Cell number 4 is damaged and the voltage drops off sooner than the others. This means the system will only last until this cell loses its charge, significantly reducing the state of charge of the battery pack. The weak cells act as a “weak point” and reduces the ability of the pack to hold a charge. Once the voltage of weak cell drops, the entire pack voltage will drop below the loads minimum operating point. In most applications, this causes the load to stop operating correctly.</p>
 						<h3>How it works</h3>
-						<p>The goal of this system is to prolong the life time of battery packs. Over time battery packs need to be replaced as individual cells begin to degrade. Our system is designed to transfer energy from the battery pack to any weak cell. The picture to the left shows the dissipation of 4 cells. Over time in a typical battery pack, cells will significantly degrade and its voltage will drop off sooner than expected. These weak cell act as a “weak point” and reduces the ability of the pack to hold a charge. Once the voltage of weak cell drop, the entire pack voltage will no longer be sufficiently high enough to power the load even if the rest of the cells still output the correct voltage. The purpose of our BMS is to transfer charge from the entire pack to the “weak” cell before the voltage drops below the minimum operating point.</p>
+						<p><span class="image left"><img src="images/BMS/pack-to-cell.jpg" alt="" width=220 height=110/></span>The goal of this system is to prolong the life time of battery packs. Our system transfers energy from the battery pack to any weak cell. The figure to the left shows a pack to cell active battery balancing topology.</p>
 
 
-						<p><span class="image left"><img src="images/pack-to-cell.jpg" alt="" width=220 height=110/></span>The overall hardware design consists of a step-down DC/DC converter that outputs 5V. The 5V supplies power to the entire board and also charges the weak cell. A Hall effect current sensor, along with an analog to digital converter sends data to the microcontroller which is fed into the charge estimation algorithm. The function of the microcontroller is to determine which of the cells are degraded and then charges using a state of charge estimation algorithm. Once the weak cell is detected, the switching circuitry will charge this cell.</p>
+						<p>The overall hardware design consists of a step-down DC/DC converter that outputs 5V. The 5V supplies power to the entire board and also charges the weak cell. A Hall effect current sensor, along with an analog to digital converter sends data to the microcontroller which is fed into the charge estimation algorithm. The function of the microcontroller is to determine which of the cells are degraded and then charges using a state of charge estimation algorithm. Once the weak cell is detected, the switching circuitry will charge this cell.</p>
 						
-						<p>The three primary functions of the terminal pins are shown in the three figures below.  Figure 4 shows the system measuring the voltage of the desired cell. Figure 5 shows the system supplying energy to determined weak cell. Each output pin, shown on the left has three capabilities, connect to ground, connect to power, or measure voltage. By closing the two relays, as shown as white switches, we can connect the output pin to power. By Connecting the one relay we can connect the output pin to ground. And finally by connecting the relays as shown we can connect the output to the ADC to measure voltage. </p>
+						<p>The three primary functions of the terminal pins are shown in the three figures below.  Figure 4 shows the system measuring the voltage of the desired cell (the 5 terminal pins are shown on the bottom left hand side of the PCB, the second one is highlighted in yellow). The first image shows the relays connected such that the pin is connected to the +5V of the DC-DC converter. The next images shows the terminal pin being connected to ground and the final image shows it being connected to the microcontroller ADC.  </p>
 
 						<div class="row no-collapse 50% uniform">
-								<div class="4u"><span class="image fit"><img src="images/power.jpg" alt="" /></span></div>
-								<div class="4u"><span class="image fit"><img src="images/ground.jpg" alt="" /></span></div>
-								<div class="4u"><span class="image fit"><img src="images/read.jpg" alt="" /></span></div>
+								<div class="4u"><span class="image fit"><img src="images/BMS/power.jpg" alt="" /></span></div>
+								<div class="4u"><span class="image fit"><img src="images/BMS/ground.jpg" alt="" /></span></div>
+								<div class="4u"><span class="image fit"><img src="images/BMS/read.jpg" alt="" /></span></div>
 							</div>
 							<div class="row">
 							<div class="4u">
@@ -66,12 +73,12 @@
 							</div>
 						</div>
 
-						<p>The three primary functions of the terminal pins are shown in the three figures below.  Figure 4 shows the system measuring the voltage of the desired cell. Figure 5 shows the system supplying energy to determined weak cell. Each output pin, shown on the left has three capabilities, connect to ground, connect to power, or measure voltage. By closing the two relays, as shown as white switches, we can connect the output pin to power. By Connecting the one relay we can connect the output pin to ground. And finally by connecting the relays as shown we can connect the output to the ADC to measure voltage. </p>
+						<p>Three three images below shows how the battery managemst system is connected to a load and the three major capabilities of the battery management system. They are as follows: measure current, read cell voltage, and charge cell. Since the hall effect current sensor is connected in series with the battery pack and the load we are able to determine the amount of current tht </p>
 
 						<div class="row no-collapse 50% uniform">
-								<div class="4u"><span class="image fit"><img src="images/current.jpg" alt="" /></span></div>
-								<div class="4u"><span class="image fit"><img src="images/voltage.jpg" alt="" /></span></div>
-								<div class="4u"><span class="image fit"><img src="images/charge.jpg" alt="" /></span></div>
+								<div class="4u"><span class="image fit"><img src="images/BMS/current.jpg" alt="" /></span></div>
+								<div class="4u"><span class="image fit"><img src="images/BMS/voltage.jpg" alt="" /></span></div>
+								<div class="4u"><span class="image fit"><img src="images/BMS/charge.jpg" alt="" /></span></div>
 							</div>
 							<div class="row">
 							<div class="4u">
