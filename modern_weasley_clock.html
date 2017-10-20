@@ -21,14 +21,15 @@
 								<ul>
 									<li><a href="BMS.html">Battery Management </a></li>
 									<li><a href="plasma_speaker.html">Plasma Speaker</a></li>
+									<li><a href="hamster_home.html">Hamster Home</a></li>
 									<li><a href="modern_weasley_clock.html">Modern Weasley Clock</a></li>
 									<li><a href="modern_weasley_clock_v2.html">Weasley Clock V2.0</a></li>
 									<li><a href="laser_harp.html">Laser Harp</a></li>
 									<li><a href="pcb_heart.html">PCB Heart</a></li>
 								</ul>
-							<li><a href="#work-experience">Work Experience</a></li>
-							<li><a href="#involvement">Involvement</a></li>
-							<li><a href="#contact" class="button">Contact</a></li>
+							<li><a href="index.html#work-experience">Work Experience</a></li>
+							<li><a href="index.html#involvement">Involvement</a></li>
+							<li><a href="index.html#contact" class="button">Contact</a></li>
 
 						</ul>
 					</nav>
@@ -38,15 +39,26 @@
 				<section id="main" class="container">
 					<header>
 						<h2>Modern Weasley Clock</h2>
-						<p>Based on the Harry Potter Weasley Clock, the hardware and iOS app that lets you know where your family or roommates are in the locations that matter. This project was a 2017 Hack the North winner!</p>
+						<p>Based on the Harry Potter Weasley Clock, the hardware and iOS app that lets you know where your family or roommates are in the locations that matter.  </br></br><a href="#" class="icon fa-trophy" style="color:#33BDFF"></a>&nbsp;&nbsp;Hack the North Winner 2017&nbsp;&nbsp;&nbsp;&nbsp;<a href="#" class="icon fa-trophy" style="color:#33BDFF"></a>&nbsp;&nbsp;$1000 1517 Grant</p>
 					</header>
 					<div class="box">
 						<span class="image featured"><img src="images/MWC/weasleypic.jpg" alt="" /></span>
 						<h3>Description</h3>
-						<p><span class="image right"><img src="images/MWC/HTN-presentation.jpg" alt="" width=220 height=220/></span>The goal of this system is to prolong the life time of battery packs. Over time battery packs need to be replaced as individual cells begin to degrade. Our system is designed to transfer energy from the battery pack to any weak cell. The picture to the left shows the dissipation of 4 cells. Over time in a typical battery pack, cells will significantly degrade and its voltage will drop off sooner than expected. These weak cell(s) act as a “weak point” and reduces the ability of the pack to hold a charge. Once the voltage of weak cell drop, the entire pack voltage will no longer be sufficiently high enough to power the load even if the rest of the cells still output the correct voltage. The purpose of our BMS is to transfer charge from the entire pack to the “weak” cell before the voltage drops below the minimum operating point.</p>
+						<p><span class="image right"><img src="images/MWC/HTN-presentation.jpg" alt="" width=220 height=220/></span>The Weasley Clock from Harry Potter. Living together with two other roommates, we also wanted to quickly know where people were, like if someone was doing groceries, or who was at home already! The design puts a spin on a traditional clock by replacing times with locations and clock hands for people. So at a glance you can see where everyone is, only at the locations that matter.The clock comes in two forms: as a physical clock and as an iOS app. The physical clock has four different colored LEDs to represent four different people, and instead of the numbers 1 to 12, there are icons for different locations. The iOS app acts as the location tracker and updates the physical clock whenever the person's location changes. You can choose your location points, i.e. your work location may be different from another person's. For this project I was responsible for all the hardware and embbeded. Michelle did all the iOS programming. In the end we met in the middle and connected the two systems.</p>
 						<h3>How it works</h3>
-						<p><span class="image left"><img src="images/MWC/HTN-components.jpg" alt="" width=390 height=220/></span>The goal of this system is to prolong the life time of battery packs. Over time battery packs need to be replaced as individual cells begin to degrade. Our system is designed to transfer energy from the battery pack to any weak cell. The picture to the left shows the dissipation of 4 cells. Over time in a typical battery pack, cells will significantly degrade and its voltage will drop off sooner than expected. These weak cell act as a “weak point” and reduces the ability of the pack to hold a charge. Once the voltage of weak cell drop, the entire pack voltage will no longer be sufficiently high enough to power the load even if the rest of the cells still output the correct voltage. The purpose of our BMS is to transfer charge from the entire pack to the “weak” cell before the voltage drops below the minimum operating point.</p>
+						<p><span class="image left"><img src="images/MWC/HTN-components.jpg" alt="" width=390 height=220/></span>The clock was made out of a round clock casing and some black cardboard (and it came together so much better than we expected). The LEDs consisted of a bunchh of neopixels all connected in series. In the middle there is a giant touch screen display. The idea was that this would show a legend communicating everyones name and there corresponding color. Unfortunatly we ran out of time in the hackathon and did get the display working properly in time. There was also a range sensor and ambient light sensor on the front. The entire thing is battery powered so we wanted it to last as long as possible. Using the range sensor we could detect if someone walked infront of the clock and then the screen would turn on. Likewise the ambeint light sensor would sense the brightness in the room so the leds and display could ajdust themselves. These two techniques allowed for the clock to last must linger on one charge. The entire system was controlled by a particle photon microcontroller. This is an arduino compatible microcontroller than connects to the internet. This made communicating with the iOS app much easier. The iOS app let the user set the location of each place. It tracked the location of the user in real time and would undate the clock automatically.</p>
+						
+						<ul class="alt">
+								<li><a href="https://github.com/mabuyo/weasley-clock/tree/locations" class="icon fa-github" style="color:#33BDFF"></a>&nbsp;&nbsp;Github</li>
+								
+								<li><a href="https://devpost.com/software/modernized-weasley-clock-yotu43" class="icon fa-trophy" style="color:#33BDFF"></a>&nbsp;&nbsp;Devpost</li>
+								<li><a href="https://www.youtube.com/watch?v=2wEQDRLW524&list=PLUPkp6CWLoR3XwbYq0Ixxb0s8SfVk2Ms1" class="icon fa-link" style="color:#33BDFF"></a>&nbsp;&nbsp;Hack the North Demo at 30:33</li>
+								<li><a href="https://www.youtube.com/watch?v=6h7YDfvVyEQ&t=1s" class="icon fa-link" style="color:#33BDFF"></a>&nbsp;&nbsp;Hack the North Video featuring the Weasley Clock</li>
+							</ul>
 
+							
+
+							
 						<div class="row no-collapse 50% uniform">
 								<div class="4u"><span class="image fit"><img src="images/MWC/HTN1.jpg" alt="" /></span></div>
 								<div class="4u"><span class="image fit"><img src="images/MWC/MWC-ios.jpg" alt="" /></span></div>
@@ -64,18 +76,6 @@
 							</div>
 						</div>
 
-
-
-							<div class="row">
-							<div class="6u 12u(mobilep)">
-								<h3>What I Learned</h3>
-								<p>Adipiscing faucibus nunc placerat. Tempus adipiscing turpis non blandit accumsan eget lacinia nunc integer interdum amet aliquam ut orci non col ut ut praesent. Semper amet interdum mi. Phasellus enim laoreet ac ac commodo faucibus faucibus. Curae lorem ipsum adipiscing ac. Vivamus ornare laoreet odio vis praesent.</p>
-							</div>
-
-							<div class="6u 12u(mobilep)">
-								<h3>Resources</h3>
-								<p>Adipiscing faucibus nunc placerat. Tempus adipiscing turpis non blandit accumsan eget lacinia nunc integer interdum amet aliquam ut orci non col ut ut praesent. Semper amet interdum mi. Phasellus enim laoreet ac ac commodo faucibus faucibus. Curae lorem ipsum adipiscing ac. Vivamus ornare laoreet odio vis praesent.</p>
-							</div>
 						</div>
 
 					</div>
