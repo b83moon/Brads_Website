@@ -42,9 +42,7 @@
   e=(!e||e.length===0?"$default_instance":e).toLowerCase()
   ;if(!n._iq.hasOwnProperty(e)){n._iq[e]={_q:[]};v(n._iq[e])}return n._iq[e]}
   ;e.amplitude=n})(window,document);
-
-  amplitude.getInstance().init("cd6625318068790714a01844fa6c99be");
-</script>
+  amplitude.getInstance().init("cd6625318068790714a01844fa6c99be");</script>
 </head>
 
 <!-- this shows up -->
@@ -261,5 +259,6 @@
 		<script src="assets/js/util.js"></script>
 		<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 		<script src="assets/js/main.js"></script>
+		<script type="text/javascript">amplitude.getInstance().logEvent('IndexPageVisit');</script>
 	</body>
 </html>
